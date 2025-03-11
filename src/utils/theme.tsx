@@ -136,7 +136,8 @@ export const getDesignTokens = (mode: 'light' | 'dark') => {
     palette: {
       mode,
       primary: {
-        main: getColor('#383D51', '#EAEBEF'),
+        // main: getColor('#383D51', '#EAEBEF'),
+        main: getColor('#000000', '#EAEBEF'),
         light: getColor('#62677B', '#F1F1F3'),
         dark: getColor('#292E41', '#D2D4DC'),
         contrast: getColor('#FFFFFF', '#0F121D'),
@@ -175,21 +176,22 @@ export const getDesignTokens = (mode: 'light' | 'dark') => {
         '200': getColor('#ECF8ED', '#0A130B'), // for alert background
       },
       text: {
-        primary: getColor('#303549', '#F1F1F3'),
-        secondary: getColor('#62677B', '#A5A8B6'),
-        disabled: getColor('#D2D4DC', '#62677B'),
-        muted: getColor('#A5A8B6', '#8E92A3'),
-        highlight: getColor('#383D51', '#C9B3F9'),
+        primary: getColor('#000000', '#000000'),
+        secondary: getColor('#000000', '#000000'),
+        disabled: getColor('#000000', '#000000'),
+        muted: getColor('#000000', '#000000'),
+        highlight: getColor('#000000', '#000000'),
       },
       background: {
-        default: getColor('#F1F1F3', '#1B2030'),
-        paper: getColor('#FFFFFF', '#292E41'),
-        surface: getColor('#F7F7F9', '#383D51'),
-        surface2: getColor('#F9F9FB', '#383D51'),
-        header: getColor('#2B2D3C', '#1B2030'),
+        default: getColor('#FFFFFF', '#000000'),
+        paper: getColor('#FFFFFF', '#000000'),
+        surface: getColor('#FFFFFF', '#222222'),
+        surface2: getColor('#FFFFFF', '#222222'),
+        // header: getColor('#2B2D3C', '#000000'),
+        header: getColor('#3D9F55', '#000000'),
         disabled: getColor('#EAEBEF', '#EBEBEF14'),
       },
-      divider: getColor('#EAEBEF', '#EBEBEF14'),
+      divider: getColor('#222222', '#EBEBEF14'),
       action: {
         active: getColor('#8E92A3', '#EBEBEF8F'),
         hover: getColor('#F1F1F3', '#EBEBEF14'),
@@ -199,11 +201,15 @@ export const getDesignTokens = (mode: 'light' | 'dark') => {
         focus: getColor('#F1F1F3', '#EBEBEF1F'),
       },
       other: {
-        standardInputLine: getColor('#383D511F', '#EBEBEF6B'),
+        standardInputLine: getColor('#000000', '#EBEBEF6B'),
       },
       gradients: {
-        aaveGradient: 'linear-gradient(248.86deg, #B6509E 10.51%, #2EBAC6 93.41%)',
-        newGradient: 'linear-gradient(79.67deg, #8C3EBC 0%, #007782 95.82%)',
+        // aaveGradient: 'linear-gradient(248.86deg, #B6509E 10.51%, #2EBAC6 93.41%)',
+        // newGradient: 'linear-gradient(79.67deg, #8C3EBC 0%, #007782 95.82%)',
+        // aaveGradient: 'linear-gradient(248.86deg, #000000 10.51%, #FFFFFF 93.41%)',
+        // newGradient: 'linear-gradient(79.67deg, #000000 0%, #FFFFFF 95.82%)',
+        aaveGradient: '#000000',
+        newGradient: '#000000',
       },
     },
     spacing: 4,
@@ -401,10 +407,10 @@ export function getThemedComponents(theme: Theme) {
         styleOverrides: {
           root: {
             '& .MuiSlider-thumb': {
-              color: theme.palette.mode === 'light' ? '#62677B' : '#C9B3F9',
+              color: theme.palette.mode === 'light' ? '#222222' : '#C9B3F9',
             },
             '& .MuiSlider-track': {
-              color: theme.palette.mode === 'light' ? '#383D51' : '#9C93B3',
+              color: theme.palette.mode === 'light' ? '#000000' : '#9C93B3',
             },
           },
         },
@@ -437,7 +443,7 @@ export function getThemedComponents(theme: Theme) {
               color: theme.palette.common.white,
               border: '1px solid',
               borderColor: '#EBEBED1F',
-              backgroundColor: '#383D51',
+              backgroundColor: '#000000',
               '&:hover, &.Mui-focusVisible': {
                 backgroundColor: theme.palette.background.header,
               },

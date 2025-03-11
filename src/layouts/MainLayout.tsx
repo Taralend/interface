@@ -5,7 +5,7 @@ import { FeedbackModal } from 'src/layouts/FeedbackDialog';
 import { useRootStore } from 'src/store/root';
 import { FORK_ENABLED } from 'src/utils/marketsAndNetworksConfig';
 
-import { AppFooter } from './AppFooter';
+// import { AppFooter } from './AppFooter';
 import { AppHeader } from './AppHeader';
 import TopBarNotify from './TopBarNotify';
 
@@ -44,7 +44,7 @@ export function MainLayout({ children }: { children: ReactNode }) {
         {children}
       </Box>
 
-      <AppFooter />
+      {/* <AppFooter /> */}
       <FeedbackModal />
       {FORK_ENABLED ? null : <AnalyticsConsent />}
     </>

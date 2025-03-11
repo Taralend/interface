@@ -1,12 +1,12 @@
 import { ChainId } from '@aave/contract-helpers';
-import { Trans } from '@lingui/macro';
+// import { Trans } from '@lingui/macro';
 import { Box, Button, useMediaQuery, useTheme } from '@mui/material';
 import { useRouter } from 'next/router';
-import { ROUTES } from 'src/components/primitives/Link';
+// import { ROUTES } from 'src/components/primitives/Link';
 import { useWeb3Context } from 'src/libs/hooks/useWeb3Context';
 import { useRootStore } from 'src/store/root';
-import { AUTH } from 'src/utils/mixPanelEvents';
 
+// import { AUTH } from 'src/utils/mixPanelEvents';
 import { BorrowAssetsList } from './lists/BorrowAssetsList/BorrowAssetsList';
 import { BorrowedPositionsList } from './lists/BorrowedPositionsList/BorrowedPositionsList';
 import { SuppliedPositionsList } from './lists/SuppliedPositionsList/SuppliedPositionsList';
@@ -19,8 +19,8 @@ interface DashboardContentWrapperProps {
 export const DashboardContentWrapper = ({ isBorrow }: DashboardContentWrapperProps) => {
   const { breakpoints } = useTheme();
   const { currentAccount } = useWeb3Context();
-  const router = useRouter();
-  const trackEvent = useRootStore((store) => store.trackEvent);
+  // const router = useRouter();
+  // const trackEvent = useRootStore((store) => store.trackEvent);
 
   const currentMarketData = useRootStore((store) => store.currentMarketData);
   const isDesktop = useMediaQuery(breakpoints.up('lg'));
@@ -55,7 +55,7 @@ export const DashboardContentWrapper = ({ isBorrow }: DashboardContentWrapperPro
                 mb: { xs: 2, md: 0 },
               }}
             >
-              <Button
+              {/* <Button
                 sx={{
                   position: { xs: 'static', md: 'absolute' },
                   top: { xs: 'auto', md: '-130px' },
@@ -70,7 +70,7 @@ export const DashboardContentWrapper = ({ isBorrow }: DashboardContentWrapperPro
                 size="small"
               >
                 <Trans>View Transactions</Trans>
-              </Button>
+              </Button> */}
             </Box>
           )}
 
@@ -95,7 +95,7 @@ export const DashboardContentWrapper = ({ isBorrow }: DashboardContentWrapperPro
                 mb: { xs: 2, md: 0 },
               }}
             >
-              <Button
+              {/* <Button
                 onClick={() => {
                   router.push(ROUTES.history);
                   trackEvent(AUTH.VIEW_TX_HISTORY);
@@ -105,7 +105,7 @@ export const DashboardContentWrapper = ({ isBorrow }: DashboardContentWrapperPro
                 size="small"
               >
                 <Trans>View Transactions</Trans>
-              </Button>
+              </Button> */}
             </Box>
           )}
 

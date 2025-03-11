@@ -1,15 +1,15 @@
 import {
   InformationCircleIcon,
-  SparklesIcon,
-  SwitchHorizontalIcon,
+  // SparklesIcon,
+  // SwitchHorizontalIcon,
 } from '@heroicons/react/outline';
 import { Trans } from '@lingui/macro';
 import {
-  Badge,
+  // Badge,
   Button,
-  NoSsr,
+  // NoSsr,
   Slide,
-  styled,
+  // styled,
   SvgIcon,
   Typography,
   useMediaQuery,
@@ -30,47 +30,47 @@ import { ENABLE_TESTNET, FORK_ENABLED } from 'src/utils/marketsAndNetworksConfig
 import { useShallow } from 'zustand/shallow';
 
 import { Link } from '../components/primitives/Link';
-import { uiConfig } from '../uiConfig';
+// import { uiConfig } from '../uiConfig';
 import { NavItems } from './components/NavItems';
 import { MobileMenu } from './MobileMenu';
-import { SettingsMenu } from './SettingsMenu';
+// import { SettingsMenu } from './SettingsMenu';
 
 interface Props {
   children: React.ReactElement;
 }
 
-const StyledBadge = styled(Badge)(({ theme }) => ({
-  '& .MuiBadge-badge': {
-    top: '2px',
-    right: '2px',
-    borderRadius: '20px',
-    width: '10px',
-    height: '10px',
-    backgroundColor: `${theme.palette.secondary.main}`,
-    color: `${theme.palette.secondary.main}`,
-    '&::after': {
-      position: 'absolute',
-      top: 0,
-      left: 0,
-      width: '100%',
-      height: '100%',
-      borderRadius: '50%',
-      animation: 'ripple 1.2s infinite ease-in-out',
-      border: '1px solid currentColor',
-      content: '""',
-    },
-  },
-  '@keyframes ripple': {
-    '0%': {
-      transform: 'scale(.8)',
-      opacity: 1,
-    },
-    '100%': {
-      transform: 'scale(2.4)',
-      opacity: 0,
-    },
-  },
-}));
+// const StyledBadge = styled(Badge)(({ theme }) => ({
+//   '& .MuiBadge-badge': {
+//     top: '2px',
+//     right: '2px',
+//     borderRadius: '20px',
+//     width: '10px',
+//     height: '10px',
+//     backgroundColor: `${theme.palette.secondary.main}`,
+//     color: `${theme.palette.secondary.main}`,
+//     '&::after': {
+//       position: 'absolute',
+//       top: 0,
+//       left: 0,
+//       width: '100%',
+//       height: '100%',
+//       borderRadius: '50%',
+//       animation: 'ripple 1.2s infinite ease-in-out',
+//       border: '1px solid currentColor',
+//       content: '""',
+//     },
+//   },
+//   '@keyframes ripple': {
+//     '0%': {
+//       transform: 'scale(.8)',
+//       opacity: 1,
+//     },
+//     '100%': {
+//       transform: 'scale(2.4)',
+//       opacity: 0,
+//     },
+//   },
+// }));
 
 function HideOnScroll({ children }: Props) {
   const { breakpoints } = useTheme();
@@ -84,18 +84,18 @@ function HideOnScroll({ children }: Props) {
   );
 }
 
-const SWITCH_VISITED_KEY = 'switchVisited';
+// const SWITCH_VISITED_KEY = 'switchVisited';
 
 export function AppHeader() {
   const { breakpoints } = useTheme();
   const md = useMediaQuery(breakpoints.down('md'));
   const sm = useMediaQuery(breakpoints.down('sm'));
-  const smd = useMediaQuery('(max-width:1120px)');
+  // const smd = useMediaQuery('(max-width:1120px)');
 
-  const [visitedSwitch, setVisitedSwitch] = useState(() => {
-    if (typeof window === 'undefined') return true;
-    return Boolean(localStorage.getItem(SWITCH_VISITED_KEY));
-  });
+  // const [visitedSwitch, setVisitedSwitch] = useState(() => {
+  //   if (typeof window === 'undefined') return true;
+  //   return Boolean(localStorage.getItem(SWITCH_VISITED_KEY));
+  // });
 
   const [mobileDrawerOpen, setMobileDrawerOpen, currentMarketData] = useRootStore(
     useShallow((state) => [
@@ -104,8 +104,8 @@ export function AppHeader() {
       state.currentMarketData,
     ])
   );
-
-  const { openSwitch, openBridge, openReadMode } = useModalContext();
+  // const { openSwitch, openBridge, openReadMode } = useModalContext();
+  const { openReadMode } = useModalContext();
   const { readOnlyMode } = useWeb3Context();
   const [walletWidgetOpen, setWalletWidgetOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -127,11 +127,11 @@ export function AppHeader() {
     setMobileMenuOpen(state);
   };
 
-  const disableTestnet = () => {
-    localStorage.setItem('testnetsEnabled', 'false');
-    // Set window.location to trigger a page reload when navigating to the the dashboard
-    window.location.href = '/';
-  };
+  // const disableTestnet = () => {
+  //   localStorage.setItem('testnetsEnabled', 'false');
+  //   // Set window.location to trigger a page reload when navigating to the the dashboard
+  //   window.location.href = '/';
+  // };
 
   const disableFork = () => {
     localStorage.setItem('testnetsEnabled', 'false');
@@ -143,22 +143,22 @@ export function AppHeader() {
     window.location.href = '/';
   };
 
-  const handleSwitchClick = () => {
-    localStorage.setItem(SWITCH_VISITED_KEY, 'true');
-    setVisitedSwitch(true);
-    openSwitch();
-  };
+  // const handleSwitchClick = () => {
+  //   localStorage.setItem(SWITCH_VISITED_KEY, 'true');
+  //   setVisitedSwitch(true);
+  //   openSwitch();
+  // };
 
-  const handleBridgeClick = () => {
-    openBridge();
-  };
+  // const handleBridgeClick = () => {
+  //   openBridge();
+  // };
 
   const testnetTooltip = (
     <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'start', gap: 1 }}>
       <Typography variant="subheader1">
         <Trans>Testnet mode is ON</Trans>
       </Typography>
-      <Typography variant="description">
+      {/* <Typography variant="description">
         <Trans>The app is running in testnet mode. Learn how it works in</Trans>{' '}
         <Link
           href="https://aave.com/faq"
@@ -169,7 +169,7 @@ export function AppHeader() {
       </Typography>
       <Button variant="outlined" sx={{ mt: '12px' }} onClick={disableTestnet}>
         <Trans>Disable testnet</Trans>
-      </Button>
+      </Button> */}
     </Box>
   );
 
@@ -222,7 +222,8 @@ export function AppHeader() {
           }}
           onClick={() => setMobileMenuOpen(false)}
         >
-          <img src={uiConfig.appLogo} alt="AAVE" width={72} height={20} />
+          {/* <img src={uiConfig.appLogo} alt="AAVE" width={40} height={40} /> */}
+          <p style={{ color: '#FFFFFF', fontSize: '20px' }}>Taralend</p>
         </Box>
         <Box sx={{ mr: sm ? 1 : 3 }}>
           {ENABLE_TESTNET && (
@@ -231,10 +232,10 @@ export function AppHeader() {
                 variant="surface"
                 size="small"
                 color="primary"
-                sx={{
-                  backgroundColor: '#B6509E',
-                  '&:hover, &.Mui-focusVisible': { backgroundColor: 'rgba(182, 80, 158, 0.7)' },
-                }}
+                // sx={{
+                //   backgroundColor: '#B6509E',
+                //   '&:hover, &.Mui-focusVisible': { backgroundColor: 'rgba(182, 80, 158, 0.7)' },
+                // }}
               >
                 TESTNET
                 <SvgIcon sx={{ marginLeft: '2px', fontSize: '16px' }}>
@@ -271,7 +272,7 @@ export function AppHeader() {
 
         <Box sx={{ flexGrow: 1 }} />
 
-        <NoSsr>
+        {/* <NoSsr>
           <StyledBadge
             invisible={visitedSwitch}
             variant="dot"
@@ -294,9 +295,9 @@ export function AppHeader() {
               </SvgIcon>
             </Button>
           </StyledBadge>
-        </NoSsr>
+        </NoSsr> */}
 
-        <NoSsr>
+        {/* <NoSsr>
           <StyledBadge
             invisible={true}
             variant="dot"
@@ -320,7 +321,7 @@ export function AppHeader() {
               </SvgIcon>
             </Button>
           </StyledBadge>
-        </NoSsr>
+        </NoSsr> */}
 
         {readOnlyMode ? (
           <Button
@@ -339,9 +340,9 @@ export function AppHeader() {
           <ConnectWalletButton />
         )}
 
-        <Box sx={{ display: { xs: 'none', md: 'block' } }}>
+        {/* <Box sx={{ display: { xs: 'none', md: 'block' } }}>
           <SettingsMenu />
-        </Box>
+        </Box> */}
 
         {!walletWidgetOpen && (
           <Box sx={{ display: { xs: 'flex', md: 'none' } }}>

@@ -19,6 +19,7 @@ import {
   scrollSepolia,
   sepolia,
   sonic,
+  taraxaTestnet,
   zksync,
 } from 'wagmi/chains';
 
@@ -76,6 +77,30 @@ export type BaseNetworkConfig = Omit<NetworkConfig, 'explorerLinkBuilder'>;
 const ratesHistoryApiUrl = `${process.env.NEXT_PUBLIC_API_BASEURL}/data/rates-history`;
 
 export const testnetConfig: Record<string, BaseNetworkConfig> = {
+  841: {
+    name: 'Taraxa',
+    publicJsonRPCUrl: ['https://rpc.mainnet.taraxa.io'],
+    baseUniswapAdapter: '0x0',
+    baseAssetSymbol: 'TARA',
+    wrappedBaseAssetSymbol: 'WTARA',
+    baseAssetDecimals: 18,
+    explorerLink: 'https://tara.to/',
+    isTestnet: true,
+    networkLogoPath: '/icons/networks/taraxa.svg',
+    wagmiChain: taraxaTestnet,
+  },
+  842: {
+    name: 'Taraxa Testnet',
+    publicJsonRPCUrl: ['https://rpc.testnet.taraxa.io'],
+    baseUniswapAdapter: '0x0',
+    baseAssetSymbol: 'TARA',
+    wrappedBaseAssetSymbol: 'WTARA',
+    baseAssetDecimals: 18,
+    explorerLink: 'https://testnet.to/',
+    isTestnet: true,
+    networkLogoPath: '/icons/networks/taraxa.svg',
+    wagmiChain: taraxaTestnet,
+  },
   [ChainId.sepolia]: {
     name: 'Ethereum Sepolia',
     publicJsonRPCUrl: [
