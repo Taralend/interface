@@ -74,6 +74,7 @@ export type MarketDataType = {
 };
 export enum CustomMarket {
   // v3 test networks, all v3.0.1
+  proto_taraxa_testnet_v3 = 'proto_taraxa_testnet_v3',
   proto_arbitrum_sepolia_v3 = 'proto_arbitrum_sepolia_v3',
   proto_fuji_v3 = 'proto_fuji_v3',
   proto_optimism_sepolia_v3 = 'proto_optimism_sepolia_v3',
@@ -81,6 +82,7 @@ export enum CustomMarket {
   proto_sepolia_v3 = 'proto_sepolia_v3',
   proto_base_sepolia_v3 = 'proto_base_sepolia_v3',
   // v3 mainnets
+  // proto_taraxa_mainnet_v3 = "proto_taraxa_mainnet_v3",
   proto_mainnet_v3 = 'proto_mainnet_v3',
   proto_optimism_v3 = 'proto_optimism_v3',
   proto_avalanche_v3 = 'proto_avalanche_v3',
@@ -110,6 +112,19 @@ const apiKey = process.env.NEXT_PUBLIC_SUBGRAPH_API_KEY;
 export const marketsData: {
   [key in keyof typeof CustomMarket]: MarketDataType;
 } = {
+  [CustomMarket.proto_taraxa_testnet_v3]: {
+    marketTitle: 'Taraxa Testnet',
+    market: CustomMarket.proto_taraxa_testnet_v3,
+    v3: true,
+    chainId: 842 as ChainId,
+    addresses: {
+      LENDING_POOL_ADDRESS_PROVIDER: '0x1583A9800736230B4a09F7398D50D9EC6553b303',
+      LENDING_POOL: '0x66297D8C8d2618888d4c74f3d02616c71B45325F',
+      WETH_GATEWAY: '0xbD94Fb9732A807a09A5e65fb28666f70CecBDD0f',
+      WALLET_BALANCE_PROVIDER: '0xf1BE95F34Bdd2BDBF5205A62C5749ee2Da599853',
+      UI_POOL_DATA_PROVIDER: '',
+    },
+  },
   [CustomMarket.proto_mainnet_v3]: {
     marketTitle: 'Core',
     market: CustomMarket.proto_mainnet_v3,
