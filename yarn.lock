@@ -2268,6 +2268,11 @@
   resolved "https://registry.yarnpkg.com/@juggle/resize-observer/-/resize-observer-3.4.0.tgz#08d6c5e20cf7e4cc02fd181c4b0c225cd31dbb60"
   integrity sha512-dfLbk+PwWvFzSxwk3n5ySL0hfBog779o8h68wK/7/APo/7cgyWp5jcXockbxdk5kFRkbeXWm4Fbi9FrdN381sA==
 
+"@junobuild/config@^0.1.3":
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/@junobuild/config/-/config-0.1.3.tgz#fb4424c3c1dfe6ff7fd779f223cc88d36541326a"
+  integrity sha512-lfuIMEY3c0uoeNI0X1iExxL7XWamWCVsCt9igpYtzwaFT0buYcKMqmVnhU7D0W1TnpyshdTLtpiPa7ctr4esOA==
+
 "@lingui/babel-plugin-extract-messages@4.14.1":
   version "4.14.1"
   resolved "https://registry.yarnpkg.com/@lingui/babel-plugin-extract-messages/-/babel-plugin-extract-messages-4.14.1.tgz#12f5a83bad1f9fef65fc22b8136ebd1052a31add"

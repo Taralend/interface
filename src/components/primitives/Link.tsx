@@ -123,15 +123,15 @@ export const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(function Link
 export const ROUTES = {
   dashboard: '/',
   markets: '/markets',
-  staking: '/staking',
-  governance: '/governance',
+  staking: '/staking', // turn flag off
+  governance: '/governance', // turn flag off
   faucet: '/faucet',
-  migrationTool: '/v3-migration',
-  marketMigrationTool: (marketName: CustomMarket) => `/v3-migration/?market=${marketName}`,
-  dynamicRenderedProposal: (proposalId: number) =>
-    `/governance/v3/proposal?proposalId=${proposalId}`,
+  // migrationTool: '/v3-migration',
+  // marketMigrationTool: (marketName: CustomMarket) => `/v3-migration/?market=${marketName}`,
+  // dynamicRenderedProposal: (proposalId: number) =>
+  //   `/governance/v3/proposal?proposalId=${proposalId}`,
   reserveOverview: (underlyingAsset: string, marketName: CustomMarket) =>
     `/reserve-overview/?underlyingAsset=${underlyingAsset}&marketName=${marketName}`,
-  history: '/history',
-  bridge: '/bridge',
+  // history: '/history',
+  // bridge: '/bridge',
 };

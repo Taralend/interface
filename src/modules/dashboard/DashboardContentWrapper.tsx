@@ -1,7 +1,8 @@
 import { ChainId } from '@aave/contract-helpers';
 // import { Trans } from '@lingui/macro';
-import { Box, Button, useMediaQuery, useTheme } from '@mui/material';
-import { useRouter } from 'next/router';
+import { Box, useMediaQuery, useTheme } from '@mui/material';
+// import { Box, Button, useMediaQuery, useTheme } from '@mui/material';
+// import { useRouter } from 'next/router';
 // import { ROUTES } from 'src/components/primitives/Link';
 import { useWeb3Context } from 'src/libs/hooks/useWeb3Context';
 import { useRootStore } from 'src/store/root';

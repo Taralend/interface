@@ -1,7 +1,8 @@
 import { Trans } from '@lingui/macro';
 import CheckRoundedIcon from '@mui/icons-material/CheckRounded';
 import CloseIcon from '@mui/icons-material/Close';
-import { Box, SvgIcon, Typography } from '@mui/material';
+// import { Box, SvgIcon, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import { Fragment } from 'react';
 import { LiquidationPenaltyTooltip } from 'src/components/infoTooltips/LiquidationPenaltyTooltip';
 import { LiquidationThresholdTooltip } from 'src/components/infoTooltips/LiquidationThresholdTooltip';
@@ -14,8 +15,7 @@ import { ComputedReserveData } from 'src/hooks/app-data-provider/useAppDataProvi
 import { useRootStore } from 'src/store/root';
 import { GENERAL, RESERVE_DETAILS } from 'src/utils/mixPanelEvents';
 
-import LightningBoltGradient from '/public/lightningBoltGradient.svg';
-
+// import LightningBoltGradient from '/public/lightningBoltGradient.svg';
 import { PanelRow, PanelTitle } from './ReservePanels';
 
 type ReserverEModePanelProps = {
@@ -32,9 +32,9 @@ export const ReserveEModePanel: React.FC<ReserverEModePanelProps> = ({ reserve }
         {reserve.eModes.map((e) => (
           <Fragment key={e.id}>
             <Box sx={{ display: 'inline-flex', alignItems: 'center' }}>
-              <SvgIcon sx={{ fontSize: '14px', mr: 0.5, ml: 2 }}>
+              {/* <SvgIcon sx={{ fontSize: '14px', mr: 0.5, ml: 2 }}>
                 <LightningBoltGradient />
-              </SvgIcon>
+              </SvgIcon> */}
               <Typography variant="subheader1">{getEmodeMessage(e.eMode.label)}</Typography>
               <ConfigStatus enabled={e.collateralEnabled} label="Collateral" />
               <ConfigStatus enabled={e.borrowingEnabled} label="Borrowable" />

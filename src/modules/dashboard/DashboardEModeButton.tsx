@@ -1,4 +1,5 @@
-import { CogIcon, LightningBoltIcon } from '@heroicons/react/solid';
+// import { CogIcon, LightningBoltIcon } from '@heroicons/react/solid';
+import { CogIcon } from '@heroicons/react/solid';
 import { Trans } from '@lingui/macro';
 import { Box, Button, SvgIcon, Typography } from '@mui/material';
 import Menu from '@mui/material/Menu';
@@ -8,8 +9,7 @@ import { useModalContext } from 'src/hooks/useModal';
 import { useRootStore } from 'src/store/root';
 import { DASHBOARD, GENERAL } from 'src/utils/mixPanelEvents';
 
-import LightningBoltGradient from '/public/lightningBoltGradient.svg';
-
+// import LightningBoltGradient from '/public/lightningBoltGradient.svg';
 import { Link } from '../../components/primitives/Link';
 import { Row } from '../../components/primitives/Row';
 import { TypographyGradient } from '../../components/primitives/TypographyGradient';
@@ -100,7 +100,7 @@ export const DashboardEModeButton = ({ userEmodeCategoryId }: DashboardEModeButt
               color: isEModeDisabled ? 'text.muted' : 'text.primary',
             }}
           >
-            {isEModeDisabled ? <LightningBoltIcon /> : <LightningBoltGradient />}
+            {/* {isEModeDisabled ? <LightningBoltIcon /> : <LightningBoltGradient />} */}
           </SvgIcon>
 
           {isEModeDisabled ? (
@@ -160,7 +160,7 @@ export const DashboardEModeButton = ({ userEmodeCategoryId }: DashboardEModeButt
                           mr: 1,
                         }}
                       >
-                        <LightningBoltGradient />
+                        {/* <LightningBoltGradient /> */}
                       </SvgIcon>
                       <Typography variant="subheader2" color="text.primary">
                         <EModeLabelMessage />

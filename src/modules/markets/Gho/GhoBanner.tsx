@@ -83,7 +83,7 @@ export const GhoBanner = ({ reserve }: GhoBannerProps) => {
           },
         })}
       >
-        <Box
+        {/* <Box
           component="img"
           src="/gho-group.svg"
           alt="ghost and coin"
@@ -113,7 +113,7 @@ export const GhoBanner = ({ reserve }: GhoBannerProps) => {
               xsm: 10,
             },
           }}
-        />
+        /> */}
         <Box
           sx={{
             display: 'flex',
