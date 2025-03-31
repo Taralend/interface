@@ -116,9 +116,15 @@ export function getSupportedChainIds(): number[] {
  * selectable markets (markets in a available network + forks when enabled)
  */
 
-export const availableMarkets = Object.keys(marketsData).filter((key) =>
-  getSupportedChainIds().includes(marketsData[key as keyof typeof CustomMarket].chainId)
-) as CustomMarket[];
+// export const availableMarkets = Object.keys(marketsData).filter((key) =>
+//   getSupportedChainIds().includes(marketsData[key as keyof typeof CustomMarket].chainId)
+// ) as CustomMarket[];
+
+// export const availableMarkets = ENABLE_TESTNET
+//   ? [CustomMarket.proto_taraxa_testnet_v3]
+//   : [CustomMarket.proto_taraxa_v3];
+
+export const availableMarkets = [CustomMarket.proto_taraxa_testnet_v3];
 
 const linkBuilder =
   ({ baseUrl, addressPrefix = 'address', txPrefix = 'tx' }: ExplorerLinkBuilderConfig) =>

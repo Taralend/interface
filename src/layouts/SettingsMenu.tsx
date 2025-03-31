@@ -14,9 +14,6 @@ import { TestNetModeSwitcher } from './components/TestNetModeSwitcher';
 
 export const LANG_MAP = {
   en: 'English',
-  es: 'Spanish',
-  fr: 'French',
-  el: 'Greek',
 };
 type LanguageCode = keyof typeof LANG_MAP;
 

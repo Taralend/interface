@@ -1,17 +1,11 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2022-03-07 15:58+0100\n"
+"POT-Creation-Date: 2025-03-31 21:44+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: en\n"
-"Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Plural-Forms: \n"
 
 #: src/components/transactions/StakeCooldown/StakeCooldownModalContent.tsx
 msgid "If you DO NOT unstake within {0} of unstake window, you will need to activate cooldown process again."
@@ -303,11 +297,6 @@ msgstr "Migrate to {0} v3 Market"
 msgid "Voting results"
 msgstr "Voting results"
 
-#: src/modules/dashboard/DashboardContentWrapper.tsx
-#: src/modules/dashboard/DashboardContentWrapper.tsx
-msgid "View Transactions"
-msgstr "View Transactions"
-
 #: src/modules/dashboard/LiquidationRiskParametresModal/components/LTVContent.tsx
 msgid "MAX"
 msgstr "MAX"
@@ -390,10 +379,6 @@ msgstr "All transactions"
 msgid "Collateral"
 msgstr "Collateral"
 
-#: src/layouts/components/LanguageSwitcher.tsx
-msgid "Spanish"
-msgstr "Spanish"
-
 #: src/components/transactions/DelegationTxsWrapper.tsx
 msgid "Signing"
 msgstr "Signing"
@@ -473,6 +458,10 @@ msgstr "Health factor"
 #: src/modules/governance/proposal/VotingResults.tsx
 msgid "Reached"
 msgstr "Reached"
+
+#: src/modules/faucet/FaucetTopPanel.tsx
+msgid "With testnet Faucet you can get free assets to test the Taralend Protocol. Make sure to switch your wallet provider to the appropriate testnet network, select desired asset, and click ‘Faucet’ to get tokens transferred to your wallet. The assets on a testnet are not “real,” meaning they have no monetary value."
+msgstr "With testnet Faucet you can get free assets to test the Taralend Protocol. Make sure to switch your wallet provider to the appropriate testnet network, select desired asset, and click ‘Faucet’ to get tokens transferred to your wallet. The assets on a testnet are not “real,” meaning they have no monetary value."
 
 #: src/layouts/AppHeader.tsx
 msgid "Fork mode is ON"
@@ -759,10 +748,6 @@ msgstr "Max"
 msgid "Slippage"
 msgstr "Slippage"
 
-#: src/layouts/components/LanguageSwitcher.tsx
-msgid "Greek"
-msgstr "Greek"
-
 #: src/components/transactions/DebtSwitch/DebtSwitchActions.tsx
 #: src/components/transactions/Swap/SwapActions.tsx
 #: src/components/transactions/Switch/SwitchActions.tsx
@@ -773,7 +758,7 @@ msgstr "Switching"
 msgid "Claim {symbol}"
 msgstr "Claim {symbol}"
 
-#: pages/v3-migration.page.tsx
+#: pages/v3-migration.migration.tsx
 msgid "Please connect your wallet to see migration tool."
 msgstr "Please connect your wallet to see migration tool."
 
@@ -1657,10 +1642,6 @@ msgstr "Reload the page"
 msgid "Choose how much voting/proposition power to give to someone else by delegating some of your AAVE, stkAAVE or aAave balance. Your tokens will remain in your account, but your delegate will be able to vote or propose on your behalf. If your AAVE, stkAAVE or aAave balance changes, your delegate's voting/proposition power will be automatically adjusted."
 msgstr "Choose how much voting/proposition power to give to someone else by delegating some of your AAVE, stkAAVE or aAave balance. Your tokens will remain in your account, but your delegate will be able to vote or propose on your behalf. If your AAVE, stkAAVE or aAave balance changes, your delegate's voting/proposition power will be automatically adjusted."
 
-#: src/layouts/AppHeader.tsx
-msgid "The app is running in testnet mode. Learn how it works in"
-msgstr "The app is running in testnet mode. Learn how it works in"
-
 #: src/ui-config/errorMapping.tsx
 msgid "Asset is not borrowable in isolation mode"
 msgstr "Asset is not borrowable in isolation mode"
@@ -1737,7 +1718,7 @@ msgstr "YAE"
 msgid "Review tx details"
 msgstr "Review tx details"
 
-#: pages/v3-migration.page.tsx
+#: pages/v3-migration.migration.tsx
 #: src/modules/dashboard/lists/SuppliedPositionsList/SuppliedPositionsList.tsx
 msgid "Nothing supplied yet"
 msgstr "Nothing supplied yet"
@@ -1869,10 +1850,6 @@ msgstr "Efficiency mode (E-Mode)"
 #: src/modules/dashboard/DashboardEModeButton.tsx
 msgid "Manage E-Mode"
 msgstr "Manage E-Mode"
-
-#: src/layouts/AppHeader.tsx
-msgid "Disable testnet"
-msgstr "Disable testnet"
 
 #: src/modules/staking/StakingPanel.tsx
 msgid "Max slashing"
@@ -2659,10 +2636,6 @@ msgstr "Supply apy"
 msgid "With a voting power of <0/>"
 msgstr "With a voting power of <0/>"
 
-#: src/layouts/components/LanguageSwitcher.tsx
-msgid "French"
-msgstr "French"
-
 #: src/components/transactions/StakeCooldown/StakeCooldownModalContent.tsx
 msgid "During the cooldown period, you will not earn any merit rewards. However, rewards earned up to this point will remain unaffected."
 msgstr "During the cooldown period, you will not earn any merit rewards. However, rewards earned up to this point will remain unaffected."
@@ -3065,7 +3038,7 @@ msgstr "The address of the pool addresses provider is invalid"
 msgid "Your voting info"
 msgstr "Your voting info"
 
-#: pages/v3-migration.page.tsx
+#: pages/v3-migration.migration.tsx
 #: src/modules/dashboard/lists/BorrowedPositionsList/BorrowedPositionsList.tsx
 msgid "Nothing borrowed yet"
 msgstr "Nothing borrowed yet"
@@ -3256,10 +3229,6 @@ msgstr "The Aave Protocol is programmed to always use the price of 1 GHO = $1. T
 #: src/modules/governance/DelegatedInfoPanel.tsx
 msgid "You have no AAVE/stkAAVE/aAave balance to delegate."
 msgstr "You have no AAVE/stkAAVE/aAave balance to delegate."
-
-#: src/modules/faucet/FaucetTopPanel.tsx
-msgid "With testnet Faucet you can get free assets to test the Aave Protocol. Make sure to switch your wallet provider to the appropriate testnet network, select desired asset, and click ‘Faucet’ to get tokens transferred to your wallet. The assets on a testnet are not “real,” meaning they have no monetary value. <0>Learn more</0>"
-msgstr "With testnet Faucet you can get free assets to test the Aave Protocol. Make sure to switch your wallet provider to the appropriate testnet network, select desired asset, and click ‘Faucet’ to get tokens transferred to your wallet. The assets on a testnet are not “real,” meaning they have no monetary value. <0>Learn more</0>"
 
 #: src/modules/staking/GetABPTokenModal.tsx
 msgid "Get ABP v2 Token"

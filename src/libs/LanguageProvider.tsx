@@ -10,12 +10,17 @@ i18n.activate('en');
 
 export const DEFAULT_LOCALE = 'en';
 
-export const SUPPORTED_LANGUAGES = ['en', 'es', 'fr', 'el'];
+// export const SUPPORTED_LANGUAGES = ['en', 'es', 'fr', 'el'];
+// export const LANG_MAP = {
+//   en: 'English',
+//   es: 'Spanish',
+//   fr: 'French',
+//   el: 'Greek',
+// };
+
+export const SUPPORTED_LANGUAGES = ['en'];
 export const LANG_MAP = {
   en: 'English',
-  es: 'Spanish',
-  fr: 'French',
-  el: 'Greek',
 };
 
 /**
