@@ -85,6 +85,18 @@ const NETWORK_ASSETS: TokenInfo[] = [
       isNative: true,
     },
   },
+  {
+    name: 'Taraxa',
+    symbol: 'TARA',
+    decimals: 18,
+    address: API_ETH_MOCK_ADDRESS,
+    chainId: 841,
+    logoURI:
+      'https://assets.coingecko.com/coins/images/4372/standard/just_logo_dark_background.png?1724826855',
+    extensions: {
+      isNative: true,
+    },
+  },
 
   // NOTE L2 ETH
   {
@@ -12755,6 +12767,24 @@ export const TOKEN_LIST: TokenList = {
       decimals: 18,
       chainId: 1,
       logoURI: 'https://assets.coingecko.com/coins/images/32254/standard/sdai.png?1697015278',
+    },
+    {
+      name: 'Taraxa',
+      address: '0x83f20f44975d03b1b09e64809b757c47f942beea',
+      symbol: 'TARA',
+      decimals: 18,
+      chainId: 1,
+      logoURI:
+        'https://assets.coingecko.com/coins/images/4372/standard/just_logo_dark_background.png?1724826855',
+    },
+    {
+      name: 'Lara Staked Taraxa',
+      address: '0x83f20f44975d03b1b09e64809b757c47f942beea',
+      symbol: 'stTARA',
+      decimals: 18,
+      chainId: 1,
+      logoURI:
+        'https://assets.coingecko.com/coins/images/4372/standard/just_logo_dark_background.png?1724826855',
     },
   ],
 };
