@@ -1,4 +1,4 @@
-import { useMediaQuery } from '@mui/material';
+// import { useMediaQuery } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { deepmerge } from '@mui/utils';
@@ -19,7 +19,8 @@ type Mode = 'light' | 'dark';
  * @returns
  */
 export function AppGlobalStyles({ children }: { children: ReactNode }) {
-  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
+  // const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
+  const prefersDarkMode = false;
   const [mode, setMode] = useState<Mode>(prefersDarkMode ? 'dark' : 'light');
   const colorMode = useMemo(
     () => ({

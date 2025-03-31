@@ -6,6 +6,9 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 const pageExtensions = ['page.tsx'];
 if (process.env.NEXT_PUBLIC_ENABLE_GOVERNANCE === 'true') pageExtensions.push('governance.tsx');
 if (process.env.NEXT_PUBLIC_ENABLE_STAKING === 'true') pageExtensions.push('staking.tsx');
+if (process.env.NEXT_PUBLIC_ENABLE_BRIDGE === 'true') pageExtensions.push('bridge.tsx');
+if (process.env.NEXT_PUBLIC_ENABLE_HISTORY === 'true') pageExtensions.push('history.tsx');
+if (process.env.NEXT_PUBLIC_ENABLE_MIGRATION === 'true') pageExtensions.push('migration.tsx');
 
 /** @type {import('next').NextConfig} */
 module.exports = withBundleAnalyzer({

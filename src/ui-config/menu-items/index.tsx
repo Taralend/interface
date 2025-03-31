@@ -50,7 +50,7 @@ export const navigation: Navigation[] = [
   {
     link: ROUTES.faucet,
     title: t`Faucet`,
-    isVisible: () => process.env.NEXT_PUBLIC_ENV === 'staging' || ENABLE_TESTNET,
+    isVisible: () => process.env.NEXT_PUBLIC_ENV === 'staging' || ENABLE_TESTNET === 'true',
   },
 ];
 
