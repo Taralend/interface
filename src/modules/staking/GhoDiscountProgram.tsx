@@ -48,26 +48,6 @@ export const GhoDiscountProgram = () => {
           position: 'relative',
         }}
       >
-        {/* <Box
-          component="img"
-          src="/illustration-green.svg"
-          sx={{
-            position: 'absolute',
-            left: -40,
-            top: -33,
-            width: 100,
-            height: 100,
-            overflow: 'hidden',
-            display: {
-              xs: 'none',
-              xsm: 'block',
-            },
-            transform: 'matrix(1, -0.14, 0.14, 1, 0, 0)',
-          }}
-          width={220}
-          height={220}
-          alt="gho coin"
-        /> */}
         <Box display="flex" flexDirection="column" alignItems={['flex-start']} gap={3}>
           <Typography
             variant="subheader1"
@@ -96,40 +76,6 @@ export const GhoDiscountProgram = () => {
             <ChevronRightIcon width={downToXsm ? 20 : 12} height={downToXsm ? 20 : 12} />
           </Button>
         </Box>
-        <Box
-          component="img"
-          src="/illustration-green.svg"
-          sx={{
-            position: 'absolute',
-            // left: -40,
-            top: -20,
-
-            right: 8,
-            width: 120,
-            height: 120,
-            overflow: 'hidden',
-            display: {
-              // xs: 'none',
-              xsm: 'block',
-            },
-            transform: 'matrix(1, -0.14, 0.14, 1, 0, 0)',
-          }}
-          width={220}
-          height={220}
-          alt="gho coin"
-        />
-        {/* <Box
-          component="img"
-          src="/illustration_friendly_ghost.png"
-          sx={{
-            position: 'absolute',
-            right: [-200, -190],
-            bottom: [-265, -270],
-            overflow: 'hidden',
-            transform: 'scaleY(0.5) scaleX(0.5)',
-          }}
-          alt="gho ghost"
-        /> */}
       </Box>
     </Box>
   );
