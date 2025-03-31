@@ -2268,6 +2268,35 @@
   resolved "https://registry.yarnpkg.com/@juggle/resize-observer/-/resize-observer-3.4.0.tgz#08d6c5e20cf7e4cc02fd181c4b0c225cd31dbb60"
   integrity sha512-dfLbk+PwWvFzSxwk3n5ySL0hfBog779o8h68wK/7/APo/7cgyWp5jcXockbxdk5kFRkbeXWm4Fbi9FrdN381sA==
 
+"@junobuild/config@^0.1.3":
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/@junobuild/config/-/config-0.1.3.tgz#fb4424c3c1dfe6ff7fd779f223cc88d36541326a"
+  integrity sha512-lfuIMEY3c0uoeNI0X1iExxL7XWamWCVsCt9igpYtzwaFT0buYcKMqmVnhU7D0W1TnpyshdTLtpiPa7ctr4esOA==
+
+"@junobuild/core@^0.1.9":
+  version "0.1.9"
+  resolved "https://registry.yarnpkg.com/@junobuild/core/-/core-0.1.9.tgz#1c786533b19ce80a5d1dcedf60e202800573dda7"
+  integrity sha512-rUHqa7xfKoMKk4YjCwyhXSTn/aoc4yg0ruAiaqBbU1wwVBuxfZXssJG4wkXBocaRzEDL8kT/CS/iS58zUM225w==
+  dependencies:
+    "@junobuild/errors" "*"
+    "@junobuild/storage" "*"
+    "@junobuild/utils" "*"
+
+"@junobuild/errors@*":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/@junobuild/errors/-/errors-0.0.5.tgz#9fae96a5fb8fa4e9f0fdcb32a52d689f07688591"
+  integrity sha512-yDNdDBQhj0vRxOksQv5v4d/Px6FZttyvUzWXBekfU129eVGP4NXSC1Bpz+P0Xhy15s06xO87bTZawWo13H20Nw==
+
+"@junobuild/storage@*":
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/@junobuild/storage/-/storage-0.1.5.tgz#510289dbc8f31f813d4fcd879999a6c2d70a0f16"
+  integrity sha512-T/Ne325b9gHhkQEnPD2erCTa06R7Bwt9qKZliB6ANgvKJtX9KaLMW3DBjGVZYrB6x4ChA2pPbEgnRZ79jYk/sA==
+
+"@junobuild/utils@*":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@junobuild/utils/-/utils-0.1.1.tgz#f13dc8d5bc09c58e6859623c9be7703eaf49e83a"
+  integrity sha512-ogy9GtkHxLwYI5yU+5HIru/6pS2nsJey+3V9xAF74zYSTIEJ311xbUEutWiAj9Cbto8GS/jgbv86wsrdqaPT9A==
+
 "@lingui/babel-plugin-extract-messages@4.14.1":
   version "4.14.1"
   resolved "https://registry.yarnpkg.com/@lingui/babel-plugin-extract-messages/-/babel-plugin-extract-messages-4.14.1.tgz#12f5a83bad1f9fef65fc22b8136ebd1052a31add"
