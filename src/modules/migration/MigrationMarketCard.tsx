@@ -1,6 +1,8 @@
 import { ArrowNarrowRightIcon } from '@heroicons/react/solid';
 import { KeyboardArrowDown, KeyboardArrowUp } from '@mui/icons-material';
 import {
+  Avatar,
+  Badge,
   Box,
   Divider,
   IconButton,
@@ -13,7 +15,7 @@ import {
 import { FC, useState } from 'react';
 import { HealthFactorNumber } from 'src/components/HealthFactorNumber';
 import { MarketDataType } from 'src/ui-config/marketsConfig';
-// import { getNetworkConfig } from 'src/utils/marketsAndNetworksConfig';
+import { getNetworkConfig } from 'src/utils/marketsAndNetworksConfig';
 
 const formatMarketName = (market: MarketDataType) => {
   return `Aave ${market.v3 ? 'V3' : 'V2'} - ${market.marketTitle}${market.isFork ? ' Fork' : ''}`;
@@ -57,7 +59,7 @@ export const MigrationMarketCard: FC<MigrationMarketCardProps> = ({
     setFromMarketData && setFromMarketData(marketData);
     setAnchorEl(null);
   };
-  // const networkConfig = getNetworkConfig(marketData.chainId);
+  const networkConfig = getNetworkConfig(marketData.chainId);
   return (
     <Box
       sx={{
@@ -72,15 +74,15 @@ export const MigrationMarketCard: FC<MigrationMarketCardProps> = ({
         From
       </Typography>
       <Box sx={{ display: 'flex', alignItems: 'center', mb: 6 }}>
-        {/* <Badge
+        <Badge
           overlap="circular"
           anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
           badgeContent={
             <Avatar src={networkConfig.networkLogoPath} sx={{ width: 20, height: 20 }} />
           }
         >
-          <Avatar src="/aave.svg" sx={{ width: 36, height: 36 }} />
-        </Badge> */}
+          <Avatar src="/taralend.svg" sx={{ width: 36, height: 36 }} />
+        </Badge>
         <Typography variant="subheader1" sx={{ ml: 5 }}>
           {formatMarketName(marketData)}
         </Typography>

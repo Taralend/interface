@@ -1,3 +1,3 @@
 export const uiConfig = {
-  appLogo: '/taralend.png',
+  appLogo: '/taralend-logo.svg',
 };

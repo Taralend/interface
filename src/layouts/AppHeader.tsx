@@ -30,7 +30,7 @@ import { ENABLE_TESTNET, FORK_ENABLED } from 'src/utils/marketsAndNetworksConfig
 import { useShallow } from 'zustand/shallow';
 
 import { Link } from '../components/primitives/Link';
-// import { uiConfig } from '../uiConfig';
+import { uiConfig } from '../uiConfig';
 import { NavItems } from './components/NavItems';
 import { MobileMenu } from './MobileMenu';
 // import { SettingsMenu } from './SettingsMenu';
@@ -222,8 +222,7 @@ export function AppHeader() {
           }}
           onClick={() => setMobileMenuOpen(false)}
         >
-          {/* <img src={uiConfig.appLogo} alt="AAVE" width={40} height={40} /> */}
-          <p style={{ color: '#FFFFFF', fontSize: '20px' }}>Taralend</p>
+          <img src={uiConfig.appLogo} alt="Taralend" width={sm ? 74 : 120} height={40} />
         </Box>
         <Box sx={{ mr: sm ? 1 : 3 }}>
           {ENABLE_TESTNET && (
